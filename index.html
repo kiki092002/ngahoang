@@ -9,7 +9,6 @@
 
   <!-- favicon -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <!-- custom css link -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
@@ -39,25 +38,25 @@
       <ul class="contacts-list">
         <li class="contact-info">
           <ion-icon name="mail-outline"></ion-icon>
-          <span class="contact-link">Email: nhoang2@seattleu.edu</span>
+          <p id="first">Email: <span class="contact-link">nhoang2@seattleu.edu</span></p>
         </li>
         <li class="contact-info">
           <ion-icon name="call-outline"></ion-icon>
-          <span class="contact-link">Phone: +1 206 765 0681</span>
+          <p id="first">Phone: <span class="contact-link">+1 206 765 0681</span></p>
         </li>
         <li class="contact-info">
           <ion-icon name="calendar-outline"></ion-icon>
-          <span class="contact-link">Birthday: Sep 16, 2002</span>
+          <p id="first">Birthday: <span class="contact-link">Sep 16, 2002</span></p>
         </li>
         <li class="contact-info">
           <ion-icon name="location-outline"></ion-icon>
-          <span class="contact-link">Location: Kingston, WA, USA</span>
+          <p id="first">Location: <span class="contact-link">Location: Kingston, WA, USA</span></p>
         </li>
       </ul>
       <div class="separator"></div>
       <div class="social-list">
-        <a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a>
-        <a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="#" class="social-link"><ion-icon name="logo-github"></ion-icon></a>
         <a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a>
       </div>
     </div>
@@ -70,36 +69,74 @@
         <ul class="navbar-list">
           <button class="tablinks" onclick="openTabs(event, 'About')">About Me</button>
           <button class="tablinks" onclick="openTabs(event, 'Experience')">Experience</button>
-          <button class="tablinks" onclick="openTabs(event, 'Project')">Project & Skill</button>
+          <button class="tablinks" onclick="openTabs(event, 'Project')">Project</button>
           <button class="tablinks" onclick="openTabs(event, 'Contact')">Contact</button>
           <button class="tablinks" onclick="openTabs(event, 'Resume')">Resume</button>
         </ul>
       </div>
       <div id="About" class="tabcontent">
         <h2 class="article-title h2">About Me</h2>
+        <div class="separator-section"></div>
         <section class="about-text">
-          <p>Hi, I'm Nga (Ashley) Hoang, a new grad Computer Science student from Seattle University.</p>
-          <p>I have a diverse skill set ranging from full-stack development to UX design, and I thrive on creating
-            efficient, user-friendly applications.</p>
-          <p><b>I'm currently looking for Software Engineering roles that align with my skills and passions.</b></p>
+          <p>Hi, I'm Nga (Ashley) Hoang, a new grad Computer Science student from Seattle University.</p><br>
+          <p>I have a diverse skill set ranging from UX design to Full-Stack development, and I thrive on creating
+            efficient, user-friendly applications.</p><br>
+          <p style="color: yellow;"><b>I'm currently looking for Software Engineering roles that align with my skills
+              and passions.</b></p> <br>
           <p>When I'm not coding, you can find me exploring the great outdoors or diving into the latest tech
             innovations.</p>
+        </section>
+        <h2 class="article-title h2">Tech Stack</h2>
+        <div class="separator-section"></div>
+        <section class="tech-stack">
+          <ul class="techstack-list">
+            <li><img src="assets/images/python-.png" alt="Python"></li>
+            <li><img src="assets/images/cplusplus.png" alt="C++"></li>
+            <li><img src="assets/images/java.png" alt="Java"></li>
+            <li><img src="assets/images/html.png" alt="HTML5"></li>
+            <li><img src="assets/images/css.png" alt="CSS"></li>
+            <li><img src="assets/images/mysql.png" alt="mysql"></li>
+            <li><img src="assets/images/flask.png" alt="Flask"></li>
+            <li><img src="assets/images/figma.png" alt="Figma"></li>
+
+
+          </ul>
+        </section>
+        <section class="skill-text">
+
         </section>
       </div>
       <div id="Experience" class="tabcontent">
         <h2 class="article-title h2">Experience</h2>
+        <div class="separator-section"></div>
         <section class="experience-text">
           <p>This is the Experience section content.</p>
         </section>
       </div>
       <div id="Project" class="tabcontent">
-        <h2 class="article-title h2">Project & Skill</h2>
+        <h2 class="article-title h2">Project</h2>
+        <div class="separator-section"></div>
 
       </div>
-      <div id="Contact" class="tabcontent">
-        <h2 class="article-title h2">Contact</h2>
-        <p></p>
-        </article>
+      <div id="Contact" class="tabcontent contact-section">
+        <h2 class="article-title h2 text-center">Contact</h2>
+        <div class="separator-section"></div>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+          <div id="status" class="message"></div>
+        </form>
       </div>
       <div id="Resume" class="tabcontent">
         <h2 class="article-title h2"> Resume</h2>
@@ -114,7 +151,7 @@
 
 
   </main>
-
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
@@ -136,6 +173,20 @@
     document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("About").style.display = "block";
       document.querySelector(".tablinks").className += " active";
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      emailjs.init("ngahoang"); // Replace 'ngahoang' with your actual user ID from EmailJS
+
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm('service_lot7skb', 'template_rj8hnrf', this)
+          .then(function () {
+            document.getElementById('status').innerHTML = "Message sent successfully!";
+          }, function (error) {
+            document.getElementById('status').innerHTML = "Failed to send the message. Please try again.";
+          });
+      });
     });
   </script>
 </body>
