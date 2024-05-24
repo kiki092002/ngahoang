@@ -152,7 +152,7 @@ body {
   /* Adjust this based on sidebar width */
   padding: 20px;
   flex-grow: 1;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: 30px 30px 30px 30px;
   overflow-y: auto;
 }
 
@@ -246,7 +246,7 @@ body {
 }
 
 .contact-section .btn {
-  background: #007bff;
+  background-color: #007bff;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -324,7 +324,7 @@ body {
   font-size: 1.5rem;
   box-shadow: none;
   border: 2px solid var(--link-color);
-  background-color: rgba(255, 255, 255, 0.1)
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .tabcontent {
