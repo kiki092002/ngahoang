@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nga Hoang - Personal Portfolio</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="sidebar-info">
+        <div class="avatar-box">
+          <img src="assets/images/avatar-3.png" alt="Nga Hoang">
+        </div>
+        <div class="info-content">
+          <h1 class="name">Nga Hoang</h1>
+          <p class="title">Software Engineer</p>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <ul class="contacts-list">
+        <li class="contact-info">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span class="contact-link">Email: nhoang2@seattleu.edu</span>
+        </li>
+        <li class="contact-info">
+          <ion-icon name="call-outline"></ion-icon>
+          <span class="contact-link">Phone: +1 206 765 0681</span>
+        </li>
+        <li class="contact-info">
+          <ion-icon name="calendar-outline"></ion-icon>
+          <span class="contact-link">Birthday: Sep 16, 2002</span>
+        </li>
+        <li class="contact-info">
+          <ion-icon name="location-outline"></ion-icon>
+          <span class="contact-link">Location: Kingston, WA, USA</span>
+        </li>
+      </ul>
+      <div class="separator"></div>
+      <div class="social-list">
+        <a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a>
+      </div>
+    </div>
+
+    <!-- main-content -->
+    <div class="main-content">
+
+      <!-- NAVBAR -->
+      <div class="tab">
+        <ul class="navbar-list">
+          <button class="tablinks" onclick="openTabs(event, 'About')">About Me</button>
+          <button class="tablinks" onclick="openTabs(event, 'Experience')">Experience</button>
+          <button class="tablinks" onclick="openTabs(event, 'Project')">Project & Skill</button>
+          <button class="tablinks" onclick="openTabs(event, 'Contact')">Contact</button>
+          <button class="tablinks" onclick="openTabs(event, 'Resume')">Resume</button>
+        </ul>
+      </div>
+      <div id="About" class="tabcontent">
+        <h2 class="article-title h2">About Me</h2>
+        <section class="about-text">
+          <p>Hi, I'm Nga (Ashley) Hoang, a new grad Computer Science student from Seattle University.</p>
+          <p>I have a diverse skill set ranging from full-stack development to UX design, and I thrive on creating
+            efficient, user-friendly applications.</p>
+          <p><b>I'm currently looking for Software Engineering roles that align with my skills and passions.</b></p>
+          <p>When I'm not coding, you can find me exploring the great outdoors or diving into the latest tech
+            innovations.</p>
+        </section>
+      </div>
+      <div id="Experience" class="tabcontent">
+        <h2 class="article-title h2">Experience</h2>
+        <section class="experience-text">
+          <p>This is the Experience section content.</p>
+        </section>
+      </div>
+      <div id="Project" class="tabcontent">
+        <h2 class="article-title h2">Project & Skill</h2>
+
+      </div>
+      <div id="Contact" class="tabcontent">
+        <h2 class="article-title h2">Contact</h2>
+        <p></p>
+        </article>
+      </div>
+      <div id="Resume" class="tabcontent">
+        <h2 class="article-title h2"> Resume</h2>
+        <object data="Nga Hoang.docx.pdf" type="application/pdf" width="500" height="700">
+
+        </object>
+      </div>
+
+
+
+    </div>
+
+
+  </main>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    function openTabs(evt, sectionName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(sectionName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Display the About section by default
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("About").style.display = "block";
+      document.querySelector(".tablinks").className += " active";
+    });
+  </script>
+</body>
+
+</html>
