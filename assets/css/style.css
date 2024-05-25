@@ -156,6 +156,163 @@ body {
   overflow-y: auto;
 }
 
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.experience-image-container {
+  position: relative;
+  margin: auto;
+}
+
+.experience-image {
+  width: 60%;
+  height: auto;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.experience-image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-link {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.overlay-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.experience-details {
+  padding: 20px;
+}
+
+.experience-year {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.experience-technologies {
+  font-size: 14px;
+  color: #aaa;
+  margin: 5px 0;
+}
+
+.experience-title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.experience-company {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.experience-description {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Adjusted to two columns for larger cards */
+  gap: 40px;
+  padding: 20px;
+}
+
+.project-card {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+}
+
+.project-details {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.project-title {
+  font-size: 24px;
+  /* Increased font size */
+  margin: 10px 0;
+}
+
+.project-role {
+  font-size: 18px;
+  /* Increased font size */
+  color: #aaa;
+}
+
+.project-role a {
+  color: var(--orange-yellow-crayola);
+  text-decoration: none;
+}
+
+.project-role a:hover {
+  color: #7e8700;
+}
 
 
 .separator {
@@ -324,7 +481,7 @@ body {
   font-size: 1.5rem;
   box-shadow: none;
   border: 2px solid var(--link-color);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1)
 }
 
 .tabcontent {
