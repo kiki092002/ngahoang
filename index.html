@@ -16,10 +16,70 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <style>
+    body {
+
+      background: radial-gradient(circle, rgba(238, 174, 202, 1) 1%, rgba(148, 187, 233, 1) 100%);
+
+
+
+      /* Prevent scrolling during animation */
+    }
+
+    .intro-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .intro-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 3vw;
+      opacity: 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      /* See-through color */
+    }
+
+    .intro-text.middle {
+      font-weight: 300;
+      /* Lighter weight for the middle text */
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+      animation: blink 1.5s infinite;
+    }
+
+
+
+    .main-content,
+    .sidebar {
+      display: none;
+      /* Initially hide main content and sidebar */
+    }
+  </style>
+
 </head>
 
 <body>
-
+  <div class="intro-container">
+    <div class="intro-text">Welcome to my portfolio</div>
+    <div class="intro-text middle">Welcome to my portfolio</div>
+    <div class="intro-text">Welcome to my portfolio</div>
+  </div>
   <!-- MAIN -->
   <main>
 
@@ -239,6 +299,35 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
+    // GSAP Animation for Intro Text
+    gsap.to(".intro-text", {
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.5,
+      ease: "power2.out",
+      onComplete: hideText
+    });
+
+    function hideText() {
+      gsap.to(".intro-text", {
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.5,
+        ease: "power2.in",
+        delay: 1,
+        onComplete: showMainContent
+      });
+    }
+
+    function showMainContent() {
+      document.querySelector(".intro-container").style.display = "none";
+      document.querySelector(".main-content").style.display = "block";
+      document.querySelector(".sidebar").style.display = "block";
+      gsap.fromTo(".sidebar", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1.5, ease: "power2.out" });
+      gsap.fromTo(".main-content", { opacity: 0 }, { opacity: 1, duration: 1.5, delay: 0.5 });
+    }
+
+
     function openTabs(evt, sectionName) {
       var i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -272,6 +361,7 @@
           });
       });
     });
+
   </script>
 </body>
 
