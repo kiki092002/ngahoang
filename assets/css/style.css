@@ -114,8 +114,10 @@ body {
   min-height: 100vh;
   /* Ensure the body takes full height */
   overflow-x: hidden;
+
   /* Prevent horizontal scroll */
 }
+
 
 .sidebar {
   position: fixed;
@@ -143,17 +145,18 @@ body {
   position: relative;
   margin-top: 60px;
   margin-left: 420px;
-
+  overflow: hidden;
   width: 900px;
-  height: 100vh;
+  flex-grow: 1;
   background: var(--bg-gradient-onyx);
   border-right: 1px solid var(--jet);
   box-shadow: var(--shadow-1);
   /* Adjust this based on sidebar width */
   padding: 20px;
-  flex-grow: 1;
+
   border-radius: 30px 30px 30px 30px;
-  overflow-y: auto;
+
+
 }
 
 .experience-card {
@@ -238,8 +241,10 @@ body {
 }
 
 
+
 .projects-grid {
   display: grid;
+  overflow-y: hidden;
   grid-template-columns: repeat(2, 1fr);
   /* Adjusted to two columns for larger cards */
   gap: 40px;
@@ -319,7 +324,9 @@ body {
   width: 100%;
   height: 1px;
   background: var(--text-color-dark);
-  margin-bottom: 5px;
+
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .sidebar .avatar-box {
@@ -373,7 +380,7 @@ body {
 
 .contact-section form {
   margin-top: 20px;
-  background-color: #fff;
+
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -388,7 +395,7 @@ body {
 .contact-section .form-group label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: var(--white-1);
 }
 
 .contact-section .form-group input,
@@ -404,7 +411,7 @@ body {
 }
 
 .contact-section .btn {
-  background-color: #007bff;
+  background-color: #333;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -413,7 +420,7 @@ body {
 }
 
 .contact-section .btn:hover {
-  background-color: #0056b3;
+  color: var(--orange-yellow-crayola);
 }
 
 .contact-section .message {
@@ -423,6 +430,9 @@ body {
 .contacts-list {
   padding: 0;
   margin: 0;
+  line-height: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .contact-info {
@@ -432,14 +442,16 @@ body {
   /* Reduce gap to bring elements closer */
   margin-bottom: 0px;
   /* Reduce margin to bring contacts closer */
+
 }
 
 .contact-info ion-icon {
   border: 2px solid var(--link-color);
-  padding: 5px;
+  padding: 6px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--orange-yellow-crayola);
+  margin-right: 6px;
 }
 
 .contact-link {
@@ -527,6 +539,7 @@ body {
 article {
   display: none;
 }
+
 
 article.active {
   display: block;
