@@ -101,9 +101,8 @@ html {
 
 body {
   display: flex;
-  justify-content: flex-start;
-  /* Align items to the start (left) */
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   /* Align items to the start (top) */
 
   background: radial-gradient(circle, rgba(238, 174, 202, 1) 1%, rgba(148, 187, 233, 1) 100%);
