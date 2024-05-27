@@ -121,9 +121,9 @@ body {
 .sidebar {
   position: fixed;
   /* Fix the sidebar to the left side */
-  margin-top: 60px;
-  margin-left: 150px;
-  height: 80vh;
+  /* margin-top: 60px; */
+  /* margin-left: 150px; */
+  flex-grow:1;
   /* Full height of the viewport */
   width: 250px;
   /* Set the width of the sidebar */
@@ -142,8 +142,8 @@ body {
 
 .main-content {
   position: relative;
-  margin-top: 60px;
-  margin-left: 420px;
+  /* margin-top: 60px; */
+  margin-left: 270px;
   overflow: hidden;
   width: 900px;
   flex-grow: 1;
