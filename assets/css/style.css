@@ -146,7 +146,7 @@ body {
   margin-left: 270px;
   overflow: hidden;
   width: 900px;
-  flex-grow: 1;
+  
   background: var(--bg-gradient-onyx);
   border-right: 1px solid var(--jet);
   box-shadow: var(--shadow-1);
